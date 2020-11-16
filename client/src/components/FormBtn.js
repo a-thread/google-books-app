@@ -1,10 +1,11 @@
 import React from "react";
+import Button from "react-bootstrap/Button"
 
 function FormBtn(props) {
     return (
-        <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
+        <Button {...props} style={{ float: "right", margin: 0}} variant="outline-light">
             {props.children}
-        </button>
+        </Button>
     );
 }
 

@@ -3,8 +3,8 @@ import { Jumbotron } from "react-bootstrap";
 
 function Header() {
     return (
-        <Jumbotron className="align-items-center">
-            <h1>Google Books App</h1>
+        <Jumbotron className="header align-items-center">
+            <h1>read moar books</h1>
         </Jumbotron>
     )
 };

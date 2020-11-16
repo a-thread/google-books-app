@@ -3,7 +3,7 @@ import BookCard from "../components/BookCard";
 import Input from "../components/Input";
 import FormBtn from "../components/FormBtn";
 import API from "../utils/API";
-import { Row } from "react-bootstrap";
+import Container from "../components/Container";
 
 function Search() {
     // Setting our component's initial state
@@ -30,7 +30,7 @@ function Search() {
             .then(res => loadBooks())
             .catch(err => console.log(err));
     }
-    
+
     // Handles updating component state when the user types into the input field
     function handleInputChange(event) {
         const { value } = event.target;
@@ -49,19 +49,15 @@ function Search() {
 
     return (
         <>
-            <form>
+            <form className="formRow">
                 <Input
-                    onChange={() => { } }
+                    onChange={() => { }}
                     name="title"
                     placeholder="book search" />
-                <FormBtn
-                    onClick={handleFormSubmit}
-                >
-                    Search
-                </FormBtn>
+                <FormBtn onClick={handleFormSubmit}> Search </FormBtn>
             </form>
 
-            <Row>
+            <Container>
                 {books
                     ? books.map((book) => (
                         <BookCard
@@ -73,7 +69,7 @@ function Search() {
                             image={book.volumeInfo.imageLinks.thumbnail} />
                     ))
                     : null}
-            </Row>
+            </Container>
         </>
     );
 }

@@ -1,23 +1,26 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Row, Col } from "react-bootstrap";
 
 function BookCard(props) {
     return (
-        <Card>
-            <div className="titleRow">
-                <Card.Title>
-                    <h2>{props.title}</h2>
-                    <h5>{props.categories}</h5>
-                    <h4>{props.authors}</h4>
-                </Card.Title>
-                <div className="col-4 row">
-                    <Button>view</Button>
-                    <Button>save</Button>
-                </div>
-            </div>
+        <Card className="book">
             <Card.Body>
-                <Card.Img className="col-lg-2" src={`${props.image}`} />
-                <Card.Text className="col-lg-10">{props.description}</Card.Text>
+                <Row className="titleRow">
+                    <Col>
+                    <h3>{props.title}</h3>
+                    <h4>Written by {props.authors}</h4>
+                    <h5><i>{props.categories}</i></h5>
+                    </Col>
+                    <Col className="btnRow">
+                        <Button variant="outline-dark">view</Button>
+                        <Button variant="outline-dark">save</Button>
+                    </Col>
+                </Row>
+            
+                <Row>
+                    <Card.Img className="col-lg-4" src={`${props.image}`} />
+                    <Card.Text className="col-lg-8">{props.description}</Card.Text>
+                </Row>
             </Card.Body>
         </Card >
     )
