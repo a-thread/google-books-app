@@ -5,7 +5,7 @@ function NavBar() {
     return (
         <Navbar expand="lg">
             <Navbar.Brand href="/">read moar books</Navbar.Brand>
-            <Nav activeKey="/search" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
+            <Nav activeKey="/search">
                 <Nav.Item>
                     <Nav.Link href="/Search">Search</Nav.Link>
                 </Nav.Item>

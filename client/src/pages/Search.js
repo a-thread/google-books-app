@@ -24,6 +24,12 @@ function Search() {
             .catch(err => console.log(err));
     };
 
+    function saveBook(book) {
+        API.saveBook(book)
+            .then(res => console.log("Success!"))
+            .catch(err => console.log(err))
+    }
+
     // Deletes a book from the database with a given id, then reloads books from the db
     function deleteBook(id) {
         API.deleteBook(id)
@@ -46,8 +52,8 @@ function Search() {
             API.getBooks({
                 title: search
             })
-            .then(res => loadBooks(res))
-            .catch(err => console.log(err))
+                .then(res => loadBooks(res))
+                .catch(err => console.log(err))
         }
     };
 
@@ -58,22 +64,20 @@ function Search() {
                     onChange={handleInputChange}
                     name="title"
                     placeholder="book search" />
-                <FormBtn 
-                disabled={!search}
-                onClick={handleFormSubmit}
+                <FormBtn
+                    disabled={!search}
+                    onClick={handleFormSubmit}
                 > Search </FormBtn>
             </form>
 
             <Container>
+                <h1>Search Results</h1>
                 {books
                     ? books.map((book) => (
                         <BookCard
                             key={book.id}
-                            title={book.volumeInfo.title}
-                            authors={book.volumeInfo.authors}
-                            description={book.volumeInfo.description}
-                            categories={book.volumeInfo.categories}
-                            image={book.volumeInfo.imageLinks.thumbnail} />
+                            book={book.volumeInfo}
+                            saveBook = {saveBook} />
                     ))
                     : null}
             </Container>
