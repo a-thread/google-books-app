@@ -1,0 +1,8 @@
+{
+  "short_name": "Google Books App",
+  "name": "React Google Books App",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
