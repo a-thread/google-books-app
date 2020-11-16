@@ -3,14 +3,17 @@ body {
     background-color: black;
 }
 
-Nav,
-.btnRow Button {
+/* Nav and Book Buttons */
+
+Nav, .btnRow Button {
     background: #d4986E;
     font-family: 'Bungee', cursive;
 }
 
+/* Jumbotron */
+
 .header {
-    background:url("https://cdn.pixabay.com/photo/2012/03/04/00/17/books-21849_1280.jpg");
+    background: url("https://cdn.pixabay.com/photo/2012/03/04/00/17/books-21849_1280.jpg");
     background-size: 100%;
 }
 
@@ -20,7 +23,9 @@ h1 {
     color: white;
 }
 
-.formRow{
+/* Search Form */
+
+.formRow {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,6 +35,8 @@ div.form-group {
     width: 45vw;
     margin-right: 5px;
 }
+
+/* Book Card */
 
 .titleRow {
     display: flex;
@@ -45,6 +52,8 @@ div.form-group {
     height: 40px;
     margin: 10px;
 }
+
+/* Adding spacing around each book listing */
 
 .book {
     margin: 20px;
