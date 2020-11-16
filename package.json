@@ -1,5 +1,5 @@
 {
-  "name": "google-books-app",
+  "name": "read-moar-books",
   "version": "0.1.0",
   "private": true,
   "main": "server.js",
