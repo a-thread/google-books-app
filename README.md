@@ -9,22 +9,6 @@
 ## Description
 This is a simple MERN application that allows users to search and save their favorite books using Google Books.
 
----
-
-#### Table of Contents
-- [Deployed Application](#deployed)
-- [Description](#description)
-- [User Story](#user)
-- [Demo](#demo)
-- [Technologies Used](#technologies)
-- [License](#license)
-- [Questions](#questions)
-
----
-
-### User Story
-AS A USER...
-
 ### Demo 
 *Demo to come!*
 
