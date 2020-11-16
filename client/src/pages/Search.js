@@ -43,7 +43,11 @@ function Search() {
     function handleFormSubmit(event) {
         event.preventDefault();
         if (search) {
-            loadBooks();
+            API.getBooks({
+                title: search
+            })
+            .then(res => loadBooks(res))
+            .catch(err => console.log(err))
         }
     };
 
@@ -51,10 +55,13 @@ function Search() {
         <>
             <form className="formRow">
                 <Input
-                    onChange={() => { }}
+                    onChange={handleInputChange}
                     name="title"
                     placeholder="book search" />
-                <FormBtn onClick={handleFormSubmit}> Search </FormBtn>
+                <FormBtn 
+                disabled={!search}
+                onClick={handleFormSubmit}
+                > Search </FormBtn>
             </form>
 
             <Container>
