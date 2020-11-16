@@ -49,9 +49,7 @@ function Search() {
     function handleFormSubmit(event) {
         event.preventDefault();
         if (search) {
-            API.getBooks({
-                title: search
-            })
+            API.getBooks(search)
                 .then(res => loadBooks(res))
                 .catch(err => console.log(err))
         }
