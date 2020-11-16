@@ -2,7 +2,7 @@
 # Read Moar Books 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-![Front Page](./client/public/img/front-page.png)
+![Front Page](./client/public/img/front-page.PNG)
     
 ### Deployed Application: [Read Moar Books](https://read-moar-books.herokuapp.com/)
 
