@@ -2,28 +2,12 @@
 # Read Moar Books 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-![Front Page](./client/public/img/front-page.png)
+![Front Page](./client/public/img/front-page.PNG)
     
 ### Deployed Application: [Read Moar Books](https://read-moar-books.herokuapp.com/)
 
 ## Description
 This is a simple MERN application that allows users to search and save their favorite books using Google Books.
-
----
-
-#### Table of Contents
-- [Deployed Application](#deployed)
-- [Description](#description)
-- [User Story](#user)
-- [Demo](#demo)
-- [Technologies Used](#technologies)
-- [License](#license)
-- [Questions](#questions)
-
----
-
-### User Story
-AS A USER...
 
 ### Demo 
 *Demo to come!*
