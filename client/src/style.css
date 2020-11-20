@@ -48,7 +48,7 @@ div.form-group {
 }
 
 .btnRow Button {
-    width: 8vw;
+    min-width: 8vw;
     height: 40px;
     margin: 10px;
 }

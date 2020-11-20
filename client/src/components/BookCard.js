@@ -1,8 +1,7 @@
 import React from "react";
 import { Card, Button, Row, Col } from "react-bootstrap";
-import API from "../utils/API";
 
-const BookCard = ({ book, saveBook }) => {
+const BookCard = ({ title, subtitle, link, authors, description, image }) => {
 
     // function deleteBook(event) {
     //     event.preventDefault();
@@ -18,19 +17,19 @@ const BookCard = ({ book, saveBook }) => {
             <Card.Body>
                 <Row className="titleRow">
                     <Col>
-                        <h3>{book.title}</h3>
-                        <h4>Written by {book.authors}</h4>
-                        <h5><i>{book.categories}</i></h5>
+                        <h3>{title}</h3>
+                        <h4>Written by {authors}</h4>
+                        <h5><i>{subtitle}</i></h5>
                     </Col>
                     <Col className="btnRow">
-                        <Button variant="outline-dark">view</Button>
-                        <Button variant="outline-dark" value={book} onClick={saveBook}>save</Button>
+                        <a href={link}><Button variant="outline-dark">view</Button></a>
+                        <Button variant="outline-dark" >save</Button>
                     </Col>
                 </Row>
 
                 <Row>
-                    <Card.Img className="col-lg-4" src={`${book.imageLinks.thumbnail}`} />
-                    <Card.Text className="col-lg-8">{book.description}</Card.Text>
+                    <Card.Img className="col-lg-4" src={`${image}`} />
+                    <Card.Text className="col-lg-8">{description}</Card.Text>
                 </Row>
             </Card.Body>
         </Card >

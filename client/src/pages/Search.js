@@ -25,8 +25,12 @@ function Search() {
     };
 
     function saveBook(book) {
+        // const book = this.state.books.find(book => book.id === id)
         API.saveBook(book)
-            .then(res => console.log("Success!"))
+            .then(res => {
+                // const savedBook = res.items;
+                console.log("success" + res);
+            })
             .catch(err => console.log(err))
     }
 
@@ -74,8 +78,13 @@ function Search() {
                     ? books.map((book) => (
                         <BookCard
                             key={book.id}
-                            book={book.volumeInfo}
-                            saveBook = {saveBook} />
+                            title={book.volumeInfo.title}
+                            subtitle={book.volumeInfo.subtitle}
+                            link={book.volumeInfo.infoLink}
+                            authors={book.volumeInfo.authors.join(", ")}
+                            description={book.volumeInfo.description}
+                            image={book.volumeInfo.imageLinks.thumbnail}
+                             />
                     ))
                     : null}
             </Container>
