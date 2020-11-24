@@ -8,7 +8,7 @@ import Container from "../components/Container";
 function Search() {
     // Setting our component's initial state
     const [books, setBooks] = useState([]);
-    const [search, setSearch] = useState("Cemetary Boys");
+    const [search, setSearch] = useState("");
 
 
     // Load all books and store them with setBooks
@@ -43,8 +43,7 @@ function Search() {
 
     // Handles updating component state when the user types into the input field
     function handleInputChange(event) {
-        const { value } = event.target;
-        setSearch(value);
+        setSearch(event.target.value);
     };
 
 
@@ -52,10 +51,13 @@ function Search() {
     // Then reload books from the database
     function handleFormSubmit(event) {
         event.preventDefault();
+        // if there is a search term
         if (search) {
-            API.getBooks(search)
-                .then(res => loadBooks(res))
-                .catch(err => console.log(err))
+            // query api
+            loadBooks(
+                // modifying query for search terms in url
+                search.split("").join("+").trim
+            )
         }
     };
 
@@ -84,7 +86,7 @@ function Search() {
                             authors={book.volumeInfo.authors.join(", ")}
                             description={book.volumeInfo.description}
                             image={book.volumeInfo.imageLinks.thumbnail}
-                             />
+                        />
                     ))
                     : null}
             </Container>
