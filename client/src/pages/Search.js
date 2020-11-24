@@ -56,7 +56,7 @@ function Search() {
             // query api
             loadBooks(
                 // modifying query for search terms in url
-                search.split("").join("+").trim
+                search.replace("[^\w\d\s]", "").split("").join("+").trim()
             )
         }
     };
